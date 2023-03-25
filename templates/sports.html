@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>{% block title %} Sports Fixtures {% endblock %}</h1>
+	{% for day in fixture_data %}
+		<h3>{{day}}</h3>	
+		{% for fixture in fixture_data[day] %}
+			<h4>{{ fixture[0] }}</h4>
+			<p>{{ fixture[1] }}</p>
+			<p>{{ fixture[2] }}</p>
+		{% endfor %}
+	{% endfor %}
+{% endblock %}
