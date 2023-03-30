@@ -1,0 +1,7 @@
+.card {
+    margin-top: 20px;
+}
+
+.card hr:last-child {
+    display: none;
+}

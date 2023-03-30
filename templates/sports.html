@@ -3,11 +3,17 @@
 {% block content %}
 	<h1>{% block title %} Sports Fixtures {% endblock %}</h1>
 	{% for day in fixture_data %}
-		<h3>{{day}}</h3>	
-		{% for fixture in fixture_data[day] %}
-			<h4>{{ fixture[0] }}</h4>
-			<p>{{ fixture[1] }}</p>
-			<p>{{ fixture[2] }}</p>
-		{% endfor %}
+		<div class="card">
+			<div class="card-header bg-dark text-white"><h3>{{day}}</h3></div>
+			
+				{% for fixture in fixture_data[day] %}
+				<div class="card-body">
+					<h5>{{ fixture[2] }}: {{ fixture[0] }}</h5>
+					<p>{{ fixture[1] }}</p>
+				</div>
+				<hr/>
+				{% endfor %}
+			
+		</div>
 	{% endfor %}
 {% endblock %}

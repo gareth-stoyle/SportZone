@@ -23,7 +23,7 @@ def get_fixtures(url):
 
     for day in day_elements:
         indexes = set()
-        if day_count < 5:
+        if day_count < 7:
             day_count += 1
             day_title = day.find("strong", class_="day-date")
 

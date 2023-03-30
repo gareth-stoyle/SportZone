@@ -11,8 +11,6 @@ def index():
 def sports():
     url = "https://www.tvsportguide.com"
     fixtures = get_fixtures(url)
-    print(fixtures)
-    #tweetData.sort(key=lambda x: x['airline_sentiment_confidence'])
     return render_template("sports.html", fixture_data=fixtures)
 
 
